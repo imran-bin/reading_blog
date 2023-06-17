@@ -30,10 +30,9 @@
      
                   @yield('singleBlog')
 
-        
-        
-      
     </div>
+    @yield('login')
+    @yield('register')
      
    
 

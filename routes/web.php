@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\userController;
 use App\Models\Blog;
@@ -22,3 +23,8 @@ Route::get('/xhh', function () {
 Route::get('/user', [userController::class,"index"]);
 Route::get('/',[HomeController::class,'index']);
 Route::get('/blog/single/{id}',[HomeController::class,'singleBlog']);
+Route::get('/login', [AuthController::class, 'login']);
+Route::get('/register', [AuthController::class, 'register']);
+Route::get('/logout', [AuthController::class, 'logout']);
+Route::post('/sdafgasdgar', [AuthController::class, 'signin'])->name('signin');
+Route::post('/newRegister', [AuthController::class, 'newRegister'])->name('newRegister');
