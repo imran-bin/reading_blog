@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\userController;
 use App\Models\Blog;
 use Illuminate\Support\Facades\Route;
@@ -19,12 +20,5 @@ Route::get('/xhh', function () {
     return view('welcome');
 });
 Route::get('/user', [userController::class,"index"]);
-Route::get('/', function () {
-    return view('blog.layout');
-
-
-});
-// Route::get('/blog', function () {
-//     $blog=Blog::all();
-//     dd($blog);
-// });
+Route::get('/',[HomeController::class,'index']);
+Route::get('/blog/single/{id}',[HomeController::class,'singleBlog']);

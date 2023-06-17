@@ -14,17 +14,27 @@
 </head>
 
 <body>
-    @include('blog.navbar')
+      @include('blog.navbar')
     <div class="mt-3">
-        @include('blog.carosiol')
+        @yield('carosiol')
+       
 
 
     </div>
     <div class="mt-5">
-        <h1 class="text-center mb-5">Our Blog</h1>
-         @include('pages.blog')
+       
+         @yield('allBlog')
 
     </div>
+    <div class="mt-5" >
+     
+                  @yield('singleBlog')
+
+        
+        
+      
+    </div>
+     
    
 
 
